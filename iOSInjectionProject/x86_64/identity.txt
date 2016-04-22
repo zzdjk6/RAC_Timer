@@ -1,0 +1,2 @@
+/Users/zzdjk6/Library/Developer/Xcode/DerivedData/RAC_Timer-gtdbnilzizktlodcziumfgrzpuaa/Build/Products/Debug-iphonesimulator/RAC_Timer.app
+
