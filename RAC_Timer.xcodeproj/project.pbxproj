@@ -14,6 +14,7 @@
 		2432FD071CCA537C005ABAFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2432FD051CCA537C005ABAFF /* LaunchScreen.storyboard */; };
 		24CA46DE1CCA79D200F9D204 /* RAC4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CA46DD1CCA79D200F9D204 /* RAC4ViewController.swift */; };
 		24CA46E01CCA79DC00F9D204 /* RAC2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CA46DF1CCA79DC00F9D204 /* RAC2ViewController.swift */; };
+		24CA46E21CCA8C0700F9D204 /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CA46E11CCA8C0700F9D204 /* RxViewController.swift */; };
 		7242DED6B9AEC990B965530C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B40A4601AA4AB0239B301BD /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		2432FD081CCA537C005ABAFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24CA46DD1CCA79D200F9D204 /* RAC4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC4ViewController.swift; sourceTree = "<group>"; };
 		24CA46DF1CCA79DC00F9D204 /* RAC2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC2ViewController.swift; sourceTree = "<group>"; };
+		24CA46E11CCA8C0700F9D204 /* RxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewController.swift; sourceTree = "<group>"; };
 		4540CC59E05265E4F0C291D9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FB378F0EF5C411397D2642BE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 				2432FD081CCA537C005ABAFF /* Info.plist */,
 				24CA46DD1CCA79D200F9D204 /* RAC4ViewController.swift */,
 				24CA46DF1CCA79DC00F9D204 /* RAC2ViewController.swift */,
+				24CA46E11CCA8C0700F9D204 /* RxViewController.swift */,
 			);
 			path = RAC_Timer;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				24CA46DE1CCA79D200F9D204 /* RAC4ViewController.swift in Sources */,
 				24CA46E01CCA79DC00F9D204 /* RAC2ViewController.swift in Sources */,
 				2432FCFD1CCA537C005ABAFF /* AppDelegate.swift in Sources */,
+				24CA46E21CCA8C0700F9D204 /* RxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

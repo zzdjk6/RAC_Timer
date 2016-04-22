@@ -125,6 +125,7 @@
         <scene sceneID="nzV-bW-AIi">
             <objects>
                 <tabBarController id="Rgy-d0-HGf" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="n3w-cu-nwF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -133,11 +134,70 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="MTJ-ZJ-SNq"/>
                         <segue destination="H3y-uS-IuL" kind="relationship" relationship="viewControllers" id="ctO-lu-fgp"/>
+                        <segue destination="Ezp-8W-CpV" kind="relationship" relationship="viewControllers" id="Z0a-2P-wse"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJe-QR-E3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-34" y="71"/>
+        </scene>
+        <!--RxSwfit-->
+        <scene sceneID="d5r-FV-dw9">
+            <objects>
+                <viewController id="Ezp-8W-CpV" customClass="RxViewController" customModule="RAC_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4NJ-iU-hY1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hmt-5f-EJg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zTD-Rx-TKy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrJ-LJ-F7y">
+                                <rect key="frame" x="138" y="316" width="100" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="获取验证码">
+                                    <color key="titleColor" red="1" green="0.074509803920000006" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="verifyCodeButtonPressed:" destination="Ezp-8W-CpV" eventType="touchUpInside" id="wYq-tV-XMc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpn-WU-lXP">
+                                <rect key="frame" x="127" y="272" width="120" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="模拟出错停止">
+                                    <color key="titleColor" red="1" green="0.074509803920000006" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="errorButtonPressed:" destination="Ezp-8W-CpV" eventType="touchUpInside" id="cm8-hB-QYp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MrJ-LJ-F7y" firstAttribute="centerY" secondItem="zTD-Rx-TKy" secondAttribute="centerY" id="CLk-M5-BYx"/>
+                            <constraint firstItem="MrJ-LJ-F7y" firstAttribute="top" secondItem="bpn-WU-lXP" secondAttribute="bottom" constant="8" id="XWl-6p-SiK"/>
+                            <constraint firstItem="bpn-WU-lXP" firstAttribute="centerX" secondItem="zTD-Rx-TKy" secondAttribute="centerX" id="oBp-Lt-4yw"/>
+                            <constraint firstItem="MrJ-LJ-F7y" firstAttribute="centerX" secondItem="zTD-Rx-TKy" secondAttribute="centerX" id="qO4-XE-pC9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="RxSwfit" id="2so-3B-nJL"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="errorButton" destination="bpn-WU-lXP" id="QFA-Ry-DOY"/>
+                        <outlet property="verifyCodeButton" destination="MrJ-LJ-F7y" id="Mm7-Jn-ti0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XCE-tX-Jcu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34.5" y="924.5"/>
         </scene>
     </scenes>
 </document>

@@ -4,3 +4,5 @@ use_frameworks!
 
 pod 'ReactiveCocoa', '~> 4.0'
 pod 'SVProgressHUD', '~> 2.0'
+pod 'RxSwift'
+pod 'RxCocoa'

@@ -86,10 +86,14 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/ReactiveCocoa.framework"
   install_framework "Pods/Result.framework"
+  install_framework "Pods/RxCocoa.framework"
+  install_framework "Pods/RxSwift.framework"
   install_framework "Pods/SVProgressHUD.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/ReactiveCocoa.framework"
   install_framework "Pods/Result.framework"
+  install_framework "Pods/RxCocoa.framework"
+  install_framework "Pods/RxSwift.framework"
   install_framework "Pods/SVProgressHUD.framework"
 fi
