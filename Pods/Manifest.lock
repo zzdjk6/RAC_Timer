@@ -1,4 +1,5 @@
 PODS:
+  - Cartography (0.6.0)
   - ReactiveCocoa (4.1.0):
     - ReactiveCocoa/UI (= 4.1.0)
     - Result (~> 2.0)
@@ -17,12 +18,14 @@ PODS:
   - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
+  - Cartography
   - ReactiveCocoa (~> 4.0)
   - RxCocoa
   - RxSwift
   - SVProgressHUD (~> 2.0)
 
 SPEC CHECKSUMS:
+  Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
   ReactiveCocoa: d70004d7a366a7b8e87e60ce2347182c77701949
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   RxCocoa: 7d6cd877de99f5640306b3d6cf87f580c1d91b61

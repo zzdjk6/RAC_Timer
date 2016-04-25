@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rgy-d0-HGf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TnR-dI-5xt">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -135,6 +135,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="MTJ-ZJ-SNq"/>
                         <segue destination="H3y-uS-IuL" kind="relationship" relationship="viewControllers" id="ctO-lu-fgp"/>
                         <segue destination="Ezp-8W-CpV" kind="relationship" relationship="viewControllers" id="Z0a-2P-wse"/>
+                        <segue destination="fUA-78-URw" kind="relationship" relationship="viewControllers" id="ju2-Eb-qMz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJe-QR-E3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -198,6 +199,131 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCE-tX-Jcu" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-34.5" y="924.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pwf-F6-S07">
+            <objects>
+                <navigationController id="TnR-dI-5xt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Qm-U2-2Jf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sl6-hI-rY9" kind="relationship" relationship="rootViewController" id="Ig4-6v-AfY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QYx-pR-qAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1152" y="-40"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Zc8-34-JP4">
+            <objects>
+                <viewController id="sl6-hI-rY9" customClass="MainViewController" customModule="RAC_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wLm-4r-OGt"/>
+                        <viewControllerLayoutGuide type="bottom" id="dcN-Rt-f7C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u17-l2-Lhk">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ode-5u-iyf">
+                                <rect key="frame" x="113" y="160" width="96" height="30"/>
+                                <state key="normal" title="Using RxSwfit"/>
+                                <connections>
+                                    <action selector="usingRxButtonPressed:" destination="sl6-hI-rY9" eventType="touchUpInside" id="7Yi-5W-FRS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfq-LO-qJ6">
+                                <rect key="frame" x="57" y="198" width="209" height="30"/>
+                                <state key="normal" title="Using ReactiveCocoa 4 (Swift)"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwy-Uw-Oxr">
+                                <rect key="frame" x="50" y="236" width="222" height="30"/>
+                                <state key="normal" title="Using ReaciveCocoa 2.5 (Obj-C)"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DF-rU-weB">
+                                <rect key="frame" x="31" y="274" width="260" height="30"/>
+                                <state key="normal" title="ReactiveCocoa 2.5 (Obj-C) -&gt; RxSwift"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTD-NU-mRy">
+                                <rect key="frame" x="30" y="312" width="260" height="30"/>
+                                <state key="normal" title="RxSwift -&gt; ReactiveCocoa 2.5 (Obj-C)"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Count Down Timer Example" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2u-iH-pne">
+                                <rect key="frame" x="50" y="89" width="212" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="qad-Ib-3wZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cuE-tB-Hhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668" y="-40"/>
+        </scene>
+        <!--RAC2Rx-->
+        <scene sceneID="1CO-jj-xgH">
+            <objects>
+                <viewController id="fUA-78-URw" customClass="RAC2RxViewController" customModule="RAC_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aIE-d2-2qJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zp2-4S-5g4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xgu-dQ-aMb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNQ-TT-s4S">
+                                <rect key="frame" x="138" y="316" width="100" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="获取验证码">
+                                    <color key="titleColor" red="1" green="0.074509803920000006" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="verifyCodeButtonPressed:" destination="fUA-78-URw" eventType="touchUpInside" id="naT-O8-gRo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nle-GZ-Cc3">
+                                <rect key="frame" x="127" y="272" width="120" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="模拟出错停止">
+                                    <color key="titleColor" red="1" green="0.074509803920000006" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="errorButtonPressed:" destination="fUA-78-URw" eventType="touchUpInside" id="lKJ-Cx-7fp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FNQ-TT-s4S" firstAttribute="centerY" secondItem="xgu-dQ-aMb" secondAttribute="centerY" id="aET-Ek-f5R"/>
+                            <constraint firstItem="nle-GZ-Cc3" firstAttribute="centerX" secondItem="xgu-dQ-aMb" secondAttribute="centerX" id="gCZ-OZ-NfN"/>
+                            <constraint firstItem="FNQ-TT-s4S" firstAttribute="top" secondItem="nle-GZ-Cc3" secondAttribute="bottom" constant="8" id="gbm-QB-2pv"/>
+                            <constraint firstItem="FNQ-TT-s4S" firstAttribute="centerX" secondItem="xgu-dQ-aMb" secondAttribute="centerX" id="szb-lM-6M0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="RAC2Rx" id="MuU-pA-EP4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="errorButton" destination="nle-GZ-Cc3" id="cx4-wC-IOP"/>
+                        <outlet property="verifyCodeButton" destination="FNQ-TT-s4S" id="UFE-4H-ir0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9up-zG-mZg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-498.5" y="918.5"/>
         </scene>
     </scenes>
 </document>
