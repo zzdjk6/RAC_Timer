@@ -13,6 +13,13 @@ import ReactiveCocoa
 
 @objc class RxTimerObservableCreator: NSObject {
     
+    /**
+     Return Timer In RACSignal
+     
+     - parameter limit: timer limit
+     
+     - returns: RACSignal<Int>
+     */
     @objc static func rac_createTimer(limit: Int = 0) -> RACSignal {
         return RACSignal.createSignal({ subscriber -> RACDisposable! in
             
@@ -34,15 +41,17 @@ import ReactiveCocoa
         })
     }
     
+    /**
+     Return Timer In Observable
+     
+     - parameter limit: timer limit
+     
+     - returns: Observable<Int>
+     */
     static func createTimer(limit: Int = 0) -> Observable<Int> {
+        // immedaitely return 0
         if limit <= 0 {
-            return Observable<Int>
-                .create{ observer -> RxSwift.Disposable in
-                    observer.onNext(0)
-                    observer.onCompleted()
-                    
-                    return NopDisposable.instance
-            }
+            return Observable<Int>.just(0)
         }
         
         // immedaitely return current limit
@@ -58,6 +67,7 @@ import ReactiveCocoa
             }
             .take(counter)
         
+        // concat signal, let it fire on both start and timer count
         let o = o1
             .concat(o2)
             .doOn{ event in

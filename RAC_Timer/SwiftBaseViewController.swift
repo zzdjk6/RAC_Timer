@@ -1,5 +1,5 @@
 //
-//  CountDownTimerBaseViewController.swift
+//  SwiftBaseViewController.swift
 //  RAC_Timer
 //
 //  Created by 陈圣晗 on 16/4/26.
@@ -9,45 +9,44 @@
 import UIKit
 import Cartography
 
-class BaseViewController: UIViewController {
+ class SwiftBaseViewController: UIViewController {
     
-    let startButtonDefaultTitle = "Start"
-    let stopButtonDefaultTtile = "Stop"
+     let startButtonDefaultTitle = "Start"
+     let stopButtonDefaultTtile = "Stop"
     
-    var startButton: UIButton = UIButton()
-    var stopButon: UIButton = UIButton()
+     var startButton: UIButton = UIButton()
+     var stopButon: UIButton = UIButton()
     
-    override func viewDidLoad() {
+     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.initUI()
+        self.updateButtons()
     }
     
-    func startButtonPressed() {
+     func startButtonPressed() {
         print("BaseViewController::startButtonPressed")
     }
     
-    func stopButtonPressed() {
+     func stopButtonPressed() {
         print("BaseViewController::stopButtonPressed")
     }
     
-    func startButtonInTimerTitle(counter: Int) -> String{
+     func startButtonInTimerTitle(counter: Int) -> String{
         return "Count Down: \(counter)"
     }
     
-    func updateButtons(counter: Int? = nil) {
+     func updateButtons(counter: Int = 0) {
         self.updateStartButton(counter)
         self.updateStopButton()
     }
     
-    private func updateStartButton(counter: Int? = nil) {
+     private func updateStartButton(counter: Int = 0) {
         // in counter
-        if let counter = counter {
-            if counter >= 1 {
-                self.startButton.setTitle(self.startButtonInTimerTitle(counter), forState: UIControlState.Normal)
-                self.startButton.enabled = false
-                return
-            }
+        if counter >= 1 {
+            self.startButton.setTitle(self.startButtonInTimerTitle(counter), forState: UIControlState.Normal)
+            self.startButton.enabled = false
+            return
         }
         
         // default
@@ -55,12 +54,12 @@ class BaseViewController: UIViewController {
         self.startButton.enabled = true
     }
     
-    private func updateStopButton() {
+     private func updateStopButton() {
         self.stopButon.setTitle(self.stopButtonDefaultTtile, forState: UIControlState.Normal)
         self.stopButon.enabled = !self.startButton.enabled
     }
     
-    private func initUI() {
+     private func initUI() {
         self.view.backgroundColor = UIColor.blackColor()
         
         self.startButton.setTitle("Start", forState: .Normal)

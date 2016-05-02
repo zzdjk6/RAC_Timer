@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		240E8E4E1CCE81720087570E /* RACTimerSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E8E4D1CCE81720087570E /* RACTimerSignal.m */; };
-		240E8E511CCE81AB0087570E /* RxOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E8E501CCE81AB0087570E /* RxOCViewController.m */; };
 		240E8E531CCE81D60087570E /* RxTimerObservableCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240E8E521CCE81D60087570E /* RxTimerObservableCreator.swift */; };
-		240E8E551CCE99DB0087570E /* CountDownTimerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240E8E541CCE99DB0087570E /* CountDownTimerBaseViewController.swift */; };
+		240E8E551CCE99DB0087570E /* SwiftBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240E8E541CCE99DB0087570E /* SwiftBaseViewController.swift */; };
 		240E8E571CCE9E670087570E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240E8E561CCE9E670087570E /* MainViewController.swift */; };
 		2432FCFD1CCA537C005ABAFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432FCFC1CCA537C005ABAFF /* AppDelegate.swift */; };
 		2432FCFF1CCA537C005ABAFF /* NSObject+RAC4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432FCFE1CCA537C005ABAFF /* NSObject+RAC4.swift */; };
@@ -18,6 +16,8 @@
 		2432FD041CCA537C005ABAFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2432FD031CCA537C005ABAFF /* Assets.xcassets */; };
 		2432FD071CCA537C005ABAFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2432FD051CCA537C005ABAFF /* LaunchScreen.storyboard */; };
 		2460CD7B1CCBE66600518594 /* RAC2RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2460CD7A1CCBE66600518594 /* RAC2RxViewController.swift */; };
+		2470E0C51CD7C79500DF33C3 /* RAC4TimerSignalCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2470E0C41CD7C79500DF33C3 /* RAC4TimerSignalCreator.swift */; };
+		2470E0CE1CD7CD5C00DF33C3 /* RAC2TimerSignalCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2470E0CD1CD7CD5C00DF33C3 /* RAC2TimerSignalCreator.m */; };
 		24CA46DE1CCA79D200F9D204 /* RAC4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CA46DD1CCA79D200F9D204 /* RAC4ViewController.swift */; };
 		24CA46E01CCA79DC00F9D204 /* RAC2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CA46DF1CCA79DC00F9D204 /* RAC2ViewController.swift */; };
 		24CA46E21CCA8C0700F9D204 /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CA46E11CCA8C0700F9D204 /* RxViewController.swift */; };
@@ -27,12 +27,8 @@
 /* Begin PBXFileReference section */
 		0B40A4601AA4AB0239B301BD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240E8E4B1CCE81710087570E /* RAC_Timer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RAC_Timer-Bridging-Header.h"; sourceTree = "<group>"; };
-		240E8E4C1CCE81720087570E /* RACTimerSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACTimerSignal.h; sourceTree = "<group>"; };
-		240E8E4D1CCE81720087570E /* RACTimerSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACTimerSignal.m; sourceTree = "<group>"; };
-		240E8E4F1CCE81AB0087570E /* RxOCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxOCViewController.h; sourceTree = "<group>"; };
-		240E8E501CCE81AB0087570E /* RxOCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxOCViewController.m; sourceTree = "<group>"; };
 		240E8E521CCE81D60087570E /* RxTimerObservableCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTimerObservableCreator.swift; sourceTree = "<group>"; };
-		240E8E541CCE99DB0087570E /* CountDownTimerBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountDownTimerBaseViewController.swift; sourceTree = "<group>"; };
+		240E8E541CCE99DB0087570E /* SwiftBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftBaseViewController.swift; sourceTree = "<group>"; };
 		240E8E561CCE9E670087570E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2432FCF91CCA537C005ABAFF /* RAC_Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAC_Timer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2432FCFC1CCA537C005ABAFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +38,9 @@
 		2432FD061CCA537C005ABAFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2432FD081CCA537C005ABAFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2460CD7A1CCBE66600518594 /* RAC2RxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC2RxViewController.swift; sourceTree = "<group>"; };
+		2470E0C41CD7C79500DF33C3 /* RAC4TimerSignalCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC4TimerSignalCreator.swift; sourceTree = "<group>"; };
+		2470E0CC1CD7CD5C00DF33C3 /* RAC2TimerSignalCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAC2TimerSignalCreator.h; sourceTree = "<group>"; };
+		2470E0CD1CD7CD5C00DF33C3 /* RAC2TimerSignalCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAC2TimerSignalCreator.m; sourceTree = "<group>"; };
 		24CA46DD1CCA79D200F9D204 /* RAC4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC4ViewController.swift; sourceTree = "<group>"; };
 		24CA46DF1CCA79DC00F9D204 /* RAC2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC2ViewController.swift; sourceTree = "<group>"; };
 		24CA46E11CCA8C0700F9D204 /* RxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewController.swift; sourceTree = "<group>"; };
@@ -82,26 +81,57 @@
 		2432FCFB1CCA537C005ABAFF /* RAC_Timer */ = {
 			isa = PBXGroup;
 			children = (
+				2470E0C91CD7C7D700DF33C3 /* ViewControllers */,
+				2470E0C81CD7C7C800DF33C3 /* Resource */,
+				2470E0C71CD7C7AE00DF33C3 /* Global */,
+				2470E0C61CD7C79D00DF33C3 /* Creators */,
+			);
+			path = RAC_Timer;
+			sourceTree = "<group>";
+		};
+		2470E0C61CD7C79D00DF33C3 /* Creators */ = {
+			isa = PBXGroup;
+			children = (
+				240E8E521CCE81D60087570E /* RxTimerObservableCreator.swift */,
+				2470E0C41CD7C79500DF33C3 /* RAC4TimerSignalCreator.swift */,
+				2470E0CC1CD7CD5C00DF33C3 /* RAC2TimerSignalCreator.h */,
+				2470E0CD1CD7CD5C00DF33C3 /* RAC2TimerSignalCreator.m */,
+			);
+			name = Creators;
+			sourceTree = "<group>";
+		};
+		2470E0C71CD7C7AE00DF33C3 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				240E8E4B1CCE81710087570E /* RAC_Timer-Bridging-Header.h */,
 				2432FCFC1CCA537C005ABAFF /* AppDelegate.swift */,
 				2432FCFE1CCA537C005ABAFF /* NSObject+RAC4.swift */,
+			);
+			name = Global;
+			sourceTree = "<group>";
+		};
+		2470E0C81CD7C7C800DF33C3 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
 				2432FD001CCA537C005ABAFF /* Main.storyboard */,
 				2432FD031CCA537C005ABAFF /* Assets.xcassets */,
 				2432FD051CCA537C005ABAFF /* LaunchScreen.storyboard */,
 				2432FD081CCA537C005ABAFF /* Info.plist */,
-				24CA46DD1CCA79D200F9D204 /* RAC4ViewController.swift */,
-				24CA46DF1CCA79DC00F9D204 /* RAC2ViewController.swift */,
-				2460CD7A1CCBE66600518594 /* RAC2RxViewController.swift */,
-				24CA46E11CCA8C0700F9D204 /* RxViewController.swift */,
-				240E8E4C1CCE81720087570E /* RACTimerSignal.h */,
-				240E8E4D1CCE81720087570E /* RACTimerSignal.m */,
-				240E8E4B1CCE81710087570E /* RAC_Timer-Bridging-Header.h */,
-				240E8E4F1CCE81AB0087570E /* RxOCViewController.h */,
-				240E8E501CCE81AB0087570E /* RxOCViewController.m */,
-				240E8E521CCE81D60087570E /* RxTimerObservableCreator.swift */,
-				240E8E541CCE99DB0087570E /* CountDownTimerBaseViewController.swift */,
-				240E8E561CCE9E670087570E /* MainViewController.swift */,
 			);
-			path = RAC_Timer;
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		2470E0C91CD7C7D700DF33C3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				240E8E561CCE9E670087570E /* MainViewController.swift */,
+				240E8E541CCE99DB0087570E /* SwiftBaseViewController.swift */,
+				24CA46E11CCA8C0700F9D204 /* RxViewController.swift */,
+				24CA46DD1CCA79D200F9D204 /* RAC4ViewController.swift */,
+				2460CD7A1CCBE66600518594 /* RAC2RxViewController.swift */,
+				24CA46DF1CCA79DC00F9D204 /* RAC2ViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		3F63BEC4B3AE6BF3AF92B782 /* Frameworks */ = {
@@ -243,15 +273,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				240E8E4E1CCE81720087570E /* RACTimerSignal.m in Sources */,
 				240E8E571CCE9E670087570E /* MainViewController.swift in Sources */,
-				240E8E551CCE99DB0087570E /* CountDownTimerBaseViewController.swift in Sources */,
+				240E8E551CCE99DB0087570E /* SwiftBaseViewController.swift in Sources */,
+				2470E0C51CD7C79500DF33C3 /* RAC4TimerSignalCreator.swift in Sources */,
 				2460CD7B1CCBE66600518594 /* RAC2RxViewController.swift in Sources */,
-				240E8E511CCE81AB0087570E /* RxOCViewController.m in Sources */,
 				2432FCFF1CCA537C005ABAFF /* NSObject+RAC4.swift in Sources */,
 				240E8E531CCE81D60087570E /* RxTimerObservableCreator.swift in Sources */,
 				24CA46DE1CCA79D200F9D204 /* RAC4ViewController.swift in Sources */,
 				24CA46E01CCA79DC00F9D204 /* RAC2ViewController.swift in Sources */,
+				2470E0CE1CD7CD5C00DF33C3 /* RAC2TimerSignalCreator.m in Sources */,
 				2432FCFD1CCA537C005ABAFF /* AppDelegate.swift in Sources */,
 				24CA46E21CCA8C0700F9D204 /* RxViewController.swift in Sources */,
 			);

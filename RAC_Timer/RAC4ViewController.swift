@@ -11,82 +11,38 @@ import Result
 import ReactiveCocoa
 import SVProgressHUD
 
-class RAC4ViewController: UIViewController {
-
-    @IBOutlet weak var verifyCodeButton: UIButton!
-    @IBOutlet weak var errorButton: UIButton!
+class RAC4ViewController: SwiftBaseViewController {
     
     let (stopTimerSignal, stopTimerObserver) = Signal<(), NoError>.pipe()
     
     // MARK: - Life Cycle
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.verifyCodeButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        self.updateVerifyCodeButton()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     // MARK: - IBAction
     
-    @IBAction func errorButtonPressed(sender: AnyObject) {
-        self.stopTimerObserver.sendNext(())
+    override func startButtonPressed() {
+        let limit = 9
+        self.updateButtons(limit)
         
-        SVProgressHUD.setMinimumDismissTimeInterval(0)
-        SVProgressHUD.showErrorWithStatus(">_< 出错了")
-    }
-    
-    @IBAction func verifyCodeButtonPressed(sender: AnyObject) {
-        let limit = 10
-        var countDown = limit - 1
-        
-        self.updateVerifyCodeButton(countDown)
-        self.errorButton.enabled = true
-        
-        timer(1, onScheduler: QueueScheduler.mainQueueScheduler)
-            .map({ _ -> Int in
-                countDown -= 1
-                return countDown
-            })
-            .take(limit - 1)
-            .takeUntil(self.stopTimerSignal)
+        RAC4TimerSignalCreator
+            .createTimer(limit)
             .takeUntil(self.willDeallocSignalProducer)
+            .takeUntil(self.stopTimerSignal)
             .observeOn(QueueScheduler.mainQueueScheduler)
-            .start { [weak self] event in
-                guard let this = self else {return}
-                
+            .start { [weak self] (event: Event<Int, NoError>) in
                 switch event {
-                case .Next(let countDown):
-                    print("Timer: \(countDown)")
-                    this.updateVerifyCodeButton(countDown)
+                case .Next(let counter):
+                    guard let this = self else {return}
+                    this.updateButtons(counter)
                 case .Completed:
-                    print("Timer: Completed")
-                    this.updateVerifyCodeButton()
-                    this.errorButton.enabled = false
+                    guard let this = self else {return}
+                    this.updateButtons()
                 default:
                     break
                 }
         }
     }
     
-    // MARK: - Private
-    
-    private func updateVerifyCodeButton(countDown: Int? = nil) {
-        if let countDown = countDown {
-            if countDown >= 1 {
-                self.verifyCodeButton.setTitle("\(countDown)秒后重新发送", forState: UIControlState.Normal)
-                self.verifyCodeButton.enabled = false
-                return
-            }
-        }
-        
-        self.verifyCodeButton.setTitle("获取验证码", forState: UIControlState.Normal)
-        self.verifyCodeButton.enabled = true
+    override func stopButtonPressed() {
+        self.stopTimerObserver.sendNext(())
     }
-
-
 }

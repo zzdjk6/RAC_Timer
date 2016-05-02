@@ -9,18 +9,12 @@
 import RxSwift
 import RxCocoa
 
-class RxViewController: BaseViewController {
+class RxViewController: SwiftBaseViewController {
     
     private var stopTimerSignal = PublishSubject<()>()
     private var disposeBag = DisposeBag()
     
     // MARK: - Life Cycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.updateButtons()
-    }
     
     // MARK: - IBAction
     
@@ -46,7 +40,6 @@ class RxViewController: BaseViewController {
                 }
             }
             .addDisposableTo(self.disposeBag)
-   
     }
     
     override func stopButtonPressed() {
