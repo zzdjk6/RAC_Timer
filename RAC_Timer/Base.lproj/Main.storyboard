@@ -3,202 +3,151 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--RAC 4-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Count Down Timer Example-->
+        <scene sceneID="dWu-Y3-BNO">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RAC4ViewController" customModule="RAC_Timer" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="6Tf-se-d6Z" customClass="MainViewController" customModule="RAC_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="gSP-o2-a0S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfE-Cx-GsA">
-                                <rect key="frame" x="138" y="316" width="100" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="获取验证码">
-                                    <color key="titleColor" red="1" green="0.074509803920000006" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="disabled">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="verifyCodeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Jn-dy-HHB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gU4-ez-1KC">
-                                <rect key="frame" x="127" y="272" width="120" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="模拟出错停止">
-                                    <color key="titleColor" red="1" green="0.074509803920000006" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="disabled">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="errorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pMS-fy-2BR"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="gU4-ez-1KC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9bA-M0-qDu"/>
-                            <constraint firstItem="WfE-Cx-GsA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="B85-nF-kXO"/>
-                            <constraint firstItem="WfE-Cx-GsA" firstAttribute="top" secondItem="gU4-ez-1KC" secondAttribute="bottom" constant="8" id="Etc-uq-Gdf"/>
-                            <constraint firstItem="WfE-Cx-GsA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bA6-Ra-kx7"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="RAC 4" id="49C-7d-VO6"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="errorButton" destination="gU4-ez-1KC" id="jSO-dL-Xht"/>
-                        <outlet property="verifyCodeButton" destination="WfE-Cx-GsA" id="abS-yG-wK2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Signal Created By RxSwift" id="3kW-y9-fje">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FJl-Pq-EfM">
+                                        <rect key="frame" x="0.0" y="114" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FJl-Pq-EfM" id="mh7-yt-oqs">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ode-5u-iyf">
+                                                    <rect key="frame" x="8" y="7" width="304" height="30"/>
+                                                    <state key="normal" title="Using RxSwfit"/>
+                                                    <connections>
+                                                        <action selector="usingRxButtonPressed:" destination="6Tf-se-d6Z" eventType="touchUpInside" id="V1k-Si-8Bg"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ode-5u-iyf" firstAttribute="centerY" secondItem="mh7-yt-oqs" secondAttribute="centerY" id="8F8-Oj-ebG"/>
+                                                <constraint firstItem="ode-5u-iyf" firstAttribute="trailing" secondItem="mh7-yt-oqs" secondAttribute="trailingMargin" id="MXc-I3-965"/>
+                                                <constraint firstItem="ode-5u-iyf" firstAttribute="leading" secondItem="mh7-yt-oqs" secondAttribute="leadingMargin" id="TDg-Q6-WPp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SdW-af-US2">
+                                        <rect key="frame" x="0.0" y="158" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SdW-af-US2" id="6vW-JP-unJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcR-Q9-17q">
+                                                    <rect key="frame" x="8" y="7" width="304" height="30"/>
+                                                    <state key="normal" title="RxSwfit -&gt; ReactiveCocoa 2.5"/>
+                                                    <connections>
+                                                        <action selector="usingRxToRAC2ButtonPressed:" destination="6Tf-se-d6Z" eventType="touchUpInside" id="w0r-dM-bMO"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LcR-Q9-17q" firstAttribute="trailing" secondItem="6vW-JP-unJ" secondAttribute="trailingMargin" id="18L-SF-uev"/>
+                                                <constraint firstItem="LcR-Q9-17q" firstAttribute="leading" secondItem="6vW-JP-unJ" secondAttribute="leadingMargin" id="CB5-Nn-ugQ"/>
+                                                <constraint firstItem="LcR-Q9-17q" firstAttribute="centerY" secondItem="6vW-JP-unJ" secondAttribute="centerY" id="byz-bz-dwD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Signal Created By ReactiveCocoa 2.5" id="yDU-hp-Nbe">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Odj-lc-Buh">
+                                        <rect key="frame" x="0.0" y="253" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Odj-lc-Buh" id="V75-zC-WqY">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95K-Ow-2gC">
+                                                    <rect key="frame" x="8" y="7" width="304" height="30"/>
+                                                    <state key="normal" title="Using ReactiveCocoa 2.5"/>
+                                                    <connections>
+                                                        <action selector="usingRAC2ButtonPressed:" destination="6Tf-se-d6Z" eventType="touchUpInside" id="La9-YD-Hw6"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="95K-Ow-2gC" firstAttribute="trailing" secondItem="V75-zC-WqY" secondAttribute="trailingMargin" id="Nn6-rf-R0C"/>
+                                                <constraint firstItem="95K-Ow-2gC" firstAttribute="leading" secondItem="V75-zC-WqY" secondAttribute="leadingMargin" id="QRq-wb-zj5"/>
+                                                <constraint firstItem="95K-Ow-2gC" firstAttribute="centerY" secondItem="V75-zC-WqY" secondAttribute="centerY" id="c8z-hO-zWL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GEb-t7-bf6">
+                                        <rect key="frame" x="0.0" y="297" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GEb-t7-bf6" id="XE9-9y-MqQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DF-rU-weB">
+                                                    <rect key="frame" x="8" y="7" width="304" height="30"/>
+                                                    <state key="normal" title="ReactiveCocoa 2.5 -&gt; RxSwift"/>
+                                                    <connections>
+                                                        <action selector="usingRAC2RXButtonPressed:" destination="6Tf-se-d6Z" eventType="touchUpInside" id="D3t-Z8-j2A"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1DF-rU-weB" firstAttribute="leading" secondItem="XE9-9y-MqQ" secondAttribute="leadingMargin" id="7vZ-gb-7GK"/>
+                                                <constraint firstItem="1DF-rU-weB" firstAttribute="trailing" secondItem="XE9-9y-MqQ" secondAttribute="trailingMargin" id="dAf-iS-dS3"/>
+                                                <constraint firstItem="1DF-rU-weB" firstAttribute="centerY" secondItem="XE9-9y-MqQ" secondAttribute="centerY" id="uzw-GE-kuT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Signal Created By ReactiveCocoa 4" id="kpE-Kb-b9v">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wYn-2n-JlC">
+                                        <rect key="frame" x="0.0" y="392" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wYn-2n-JlC" id="Sec-0y-fPA">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfq-LO-qJ6">
+                                                    <rect key="frame" x="8" y="7" width="304" height="30"/>
+                                                    <state key="normal" title="Using ReactiveCocoa 4"/>
+                                                    <connections>
+                                                        <action selector="usingRAC4ButtonPressed:" destination="6Tf-se-d6Z" eventType="touchUpInside" id="08u-4C-yMa"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bfq-LO-qJ6" firstAttribute="leading" secondItem="Sec-0y-fPA" secondAttribute="leadingMargin" id="P6T-c4-PZs"/>
+                                                <constraint firstItem="bfq-LO-qJ6" firstAttribute="centerY" secondItem="Sec-0y-fPA" secondAttribute="centerY" id="bFH-gS-IJx"/>
+                                                <constraint firstItem="bfq-LO-qJ6" firstAttribute="trailing" secondItem="Sec-0y-fPA" secondAttribute="trailingMargin" id="hcD-Tl-3WZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="6Tf-se-d6Z" id="xOF-ww-nDd"/>
+                            <outlet property="delegate" destination="6Tf-se-d6Z" id="lbE-ut-7DV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Count Down Timer Example" id="rNX-qd-j2B"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BN4-nk-Bia" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="490.5" y="-58.5"/>
-        </scene>
-        <!--RAC 2-->
-        <scene sceneID="agi-ki-4sZ">
-            <objects>
-                <viewController id="H3y-uS-IuL" customClass="RAC2ViewController" customModule="RAC_Timer" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6fb-ge-vGW"/>
-                        <viewControllerLayoutGuide type="bottom" id="dqk-Rb-tCq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="h7m-xS-HNf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atW-Gm-Zlw">
-                                <rect key="frame" x="138" y="316" width="100" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="获取验证码">
-                                    <color key="titleColor" red="1" green="0.074509803920000006" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="disabled">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="verifyCodeButtonPressed:" destination="H3y-uS-IuL" eventType="touchUpInside" id="mG2-DQ-6qm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4p7-aO-To1">
-                                <rect key="frame" x="127" y="272" width="120" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="模拟出错停止">
-                                    <color key="titleColor" red="1" green="0.074509803920000006" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="disabled">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="errorButtonPressed:" destination="H3y-uS-IuL" eventType="touchUpInside" id="CrP-qK-2K2"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="atW-Gm-Zlw" firstAttribute="centerX" secondItem="h7m-xS-HNf" secondAttribute="centerX" id="C8J-RO-4DQ"/>
-                            <constraint firstItem="atW-Gm-Zlw" firstAttribute="centerY" secondItem="h7m-xS-HNf" secondAttribute="centerY" id="bpU-n5-PoL"/>
-                            <constraint firstItem="4p7-aO-To1" firstAttribute="centerX" secondItem="h7m-xS-HNf" secondAttribute="centerX" id="d56-xW-Sqm"/>
-                            <constraint firstItem="atW-Gm-Zlw" firstAttribute="top" secondItem="4p7-aO-To1" secondAttribute="bottom" constant="8" id="gkd-4U-2UO"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="RAC 2" id="8yv-U0-FY6"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="errorButton" destination="4p7-aO-To1" id="Mez-wa-5ws"/>
-                        <outlet property="verifyCodeButton" destination="atW-Gm-Zlw" id="OWi-DS-GQZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Yt-ZP-ZPg" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="490.5" y="679.5"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="nzV-bW-AIi">
-            <objects>
-                <tabBarController id="Rgy-d0-HGf" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="n3w-cu-nwF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="MTJ-ZJ-SNq"/>
-                        <segue destination="H3y-uS-IuL" kind="relationship" relationship="viewControllers" id="ctO-lu-fgp"/>
-                        <segue destination="Ezp-8W-CpV" kind="relationship" relationship="viewControllers" id="Z0a-2P-wse"/>
-                        <segue destination="fUA-78-URw" kind="relationship" relationship="viewControllers" id="ju2-Eb-qMz"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QJe-QR-E3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-34" y="71"/>
-        </scene>
-        <!--RxSwfit-->
-        <scene sceneID="d5r-FV-dw9">
-            <objects>
-                <viewController id="Ezp-8W-CpV" customClass="RxViewController" customModule="RAC_Timer" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4NJ-iU-hY1"/>
-                        <viewControllerLayoutGuide type="bottom" id="Hmt-5f-EJg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zTD-Rx-TKy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrJ-LJ-F7y">
-                                <rect key="frame" x="138" y="316" width="100" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="获取验证码">
-                                    <color key="titleColor" red="1" green="0.074509803920000006" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="disabled">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="verifyCodeButtonPressed:" destination="Ezp-8W-CpV" eventType="touchUpInside" id="wYq-tV-XMc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpn-WU-lXP">
-                                <rect key="frame" x="127" y="272" width="120" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="模拟出错停止">
-                                    <color key="titleColor" red="1" green="0.074509803920000006" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="disabled">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="errorButtonPressed:" destination="Ezp-8W-CpV" eventType="touchUpInside" id="cm8-hB-QYp"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="MrJ-LJ-F7y" firstAttribute="centerY" secondItem="zTD-Rx-TKy" secondAttribute="centerY" id="CLk-M5-BYx"/>
-                            <constraint firstItem="MrJ-LJ-F7y" firstAttribute="top" secondItem="bpn-WU-lXP" secondAttribute="bottom" constant="8" id="XWl-6p-SiK"/>
-                            <constraint firstItem="bpn-WU-lXP" firstAttribute="centerX" secondItem="zTD-Rx-TKy" secondAttribute="centerX" id="oBp-Lt-4yw"/>
-                            <constraint firstItem="MrJ-LJ-F7y" firstAttribute="centerX" secondItem="zTD-Rx-TKy" secondAttribute="centerX" id="qO4-XE-pC9"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="RxSwfit" id="2so-3B-nJL"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="errorButton" destination="bpn-WU-lXP" id="QFA-Ry-DOY"/>
-                        <outlet property="verifyCodeButton" destination="MrJ-LJ-F7y" id="Mm7-Jn-ti0"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XCE-tX-Jcu" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-34.5" y="924.5"/>
+            <point key="canvasLocation" x="-765" y="-40"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pwf-F6-S07">
@@ -209,127 +158,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="sl6-hI-rY9" kind="relationship" relationship="rootViewController" id="Ig4-6v-AfY"/>
+                        <segue destination="6Tf-se-d6Z" kind="relationship" relationship="rootViewController" id="Y9Y-Lt-sJ1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYx-pR-qAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1152" y="-40"/>
-        </scene>
-        <!--Main View Controller-->
-        <scene sceneID="Zc8-34-JP4">
-            <objects>
-                <viewController id="sl6-hI-rY9" customClass="MainViewController" customModule="RAC_Timer" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wLm-4r-OGt"/>
-                        <viewControllerLayoutGuide type="bottom" id="dcN-Rt-f7C"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="u17-l2-Lhk">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ode-5u-iyf">
-                                <rect key="frame" x="113" y="160" width="96" height="30"/>
-                                <state key="normal" title="Using RxSwfit"/>
-                                <connections>
-                                    <action selector="usingRxButtonPressed:" destination="sl6-hI-rY9" eventType="touchUpInside" id="7Yi-5W-FRS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfq-LO-qJ6">
-                                <rect key="frame" x="57" y="198" width="209" height="30"/>
-                                <state key="normal" title="Using ReactiveCocoa 4 (Swift)"/>
-                                <connections>
-                                    <action selector="usingRAC4ButtonPressed:" destination="sl6-hI-rY9" eventType="touchUpInside" id="abi-3Z-MUx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwy-Uw-Oxr">
-                                <rect key="frame" x="50" y="236" width="222" height="30"/>
-                                <state key="normal" title="Using ReaciveCocoa 2.5 (Obj-C)"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DF-rU-weB">
-                                <rect key="frame" x="31" y="274" width="260" height="30"/>
-                                <state key="normal" title="ReactiveCocoa 2.5 (Obj-C) -&gt; RxSwift"/>
-                                <connections>
-                                    <action selector="usingRAC2RXButtonPressed:" destination="sl6-hI-rY9" eventType="touchUpInside" id="u2c-Se-2DY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTD-NU-mRy">
-                                <rect key="frame" x="30" y="312" width="260" height="30"/>
-                                <state key="normal" title="RxSwift -&gt; ReactiveCocoa 2.5 (Obj-C)"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Count Down Timer Example" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2u-iH-pne">
-                                <rect key="frame" x="50" y="89" width="212" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="qad-Ib-3wZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cuE-tB-Hhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-668" y="-40"/>
-        </scene>
-        <!--RAC2Rx-->
-        <scene sceneID="1CO-jj-xgH">
-            <objects>
-                <viewController id="fUA-78-URw" customClass="RAC2RxViewController" customModule="RAC_Timer" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aIE-d2-2qJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="Zp2-4S-5g4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xgu-dQ-aMb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNQ-TT-s4S">
-                                <rect key="frame" x="138" y="316" width="100" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="获取验证码">
-                                    <color key="titleColor" red="1" green="0.074509803920000006" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="disabled">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="verifyCodeButtonPressed:" destination="fUA-78-URw" eventType="touchUpInside" id="naT-O8-gRo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nle-GZ-Cc3">
-                                <rect key="frame" x="127" y="272" width="120" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="模拟出错停止">
-                                    <color key="titleColor" red="1" green="0.074509803920000006" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="disabled">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="errorButtonPressed:" destination="fUA-78-URw" eventType="touchUpInside" id="lKJ-Cx-7fp"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="FNQ-TT-s4S" firstAttribute="centerY" secondItem="xgu-dQ-aMb" secondAttribute="centerY" id="aET-Ek-f5R"/>
-                            <constraint firstItem="nle-GZ-Cc3" firstAttribute="centerX" secondItem="xgu-dQ-aMb" secondAttribute="centerX" id="gCZ-OZ-NfN"/>
-                            <constraint firstItem="FNQ-TT-s4S" firstAttribute="top" secondItem="nle-GZ-Cc3" secondAttribute="bottom" constant="8" id="gbm-QB-2pv"/>
-                            <constraint firstItem="FNQ-TT-s4S" firstAttribute="centerX" secondItem="xgu-dQ-aMb" secondAttribute="centerX" id="szb-lM-6M0"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="RAC2Rx" id="MuU-pA-EP4"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="errorButton" destination="nle-GZ-Cc3" id="cx4-wC-IOP"/>
-                        <outlet property="verifyCodeButton" destination="FNQ-TT-s4S" id="UFE-4H-ir0"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9up-zG-mZg" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-498.5" y="918.5"/>
         </scene>
     </scenes>
 </document>

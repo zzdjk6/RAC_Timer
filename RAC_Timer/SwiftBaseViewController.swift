@@ -9,39 +9,39 @@
 import UIKit
 import Cartography
 
- class SwiftBaseViewController: UIViewController {
+class SwiftBaseViewController: UIViewController {
     
-     let startButtonDefaultTitle = "Start"
-     let stopButtonDefaultTtile = "Stop"
+    let startButtonDefaultTitle = "Start"
+    let stopButtonDefaultTtile = "Stop"
     
-     var startButton: UIButton = UIButton()
-     var stopButon: UIButton = UIButton()
+    var startButton: UIButton = UIButton()
+    var stopButon: UIButton = UIButton()
     
-     override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         self.initUI()
         self.updateButtons()
     }
     
-     func startButtonPressed() {
+    func startButtonPressed() {
         print("BaseViewController::startButtonPressed")
     }
     
-     func stopButtonPressed() {
+    func stopButtonPressed() {
         print("BaseViewController::stopButtonPressed")
     }
     
-     func startButtonInTimerTitle(counter: Int) -> String{
+    func startButtonInTimerTitle(counter: Int) -> String{
         return "Count Down: \(counter)"
     }
     
-     func updateButtons(counter: Int = 0) {
+    func updateButtons(counter: Int = 0) {
         self.updateStartButton(counter)
         self.updateStopButton()
     }
     
-     private func updateStartButton(counter: Int = 0) {
+    private func updateStartButton(counter: Int = 0) {
         // in counter
         if counter >= 1 {
             self.startButton.setTitle(self.startButtonInTimerTitle(counter), forState: UIControlState.Normal)
@@ -54,12 +54,12 @@ import Cartography
         self.startButton.enabled = true
     }
     
-     private func updateStopButton() {
+    private func updateStopButton() {
         self.stopButon.setTitle(self.stopButtonDefaultTtile, forState: UIControlState.Normal)
         self.stopButon.enabled = !self.startButton.enabled
     }
     
-     private func initUI() {
+    private func initUI() {
         self.view.backgroundColor = UIColor.blackColor()
         
         self.startButton.setTitle("Start", forState: .Normal)

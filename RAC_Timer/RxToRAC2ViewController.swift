@@ -1,15 +1,16 @@
 //
-//  RAC2ViewController.swift
+//  RxToRAC2ViewController.swift
 //  RAC_Timer
 //
-//  Created by 陈圣晗 on 16/4/22.
+//  Created by 陈圣晗 on 16/5/5.
 //  Copyright © 2016年 陈圣晗. All rights reserved.
 //
 
 import UIKit
 import ReactiveCocoa
+import RxSwift
 
-class RAC2ViewController: SwiftBaseViewController {
+class RxToRAC2ViewController: SwiftBaseViewController {
     
     let stopTimerSignal = RACSubject()
     
@@ -21,9 +22,10 @@ class RAC2ViewController: SwiftBaseViewController {
         let limit = 9
         self.updateButtons(limit)
         
-        RAC2TimerSignalCreator
-            .createSignal(limit)
-            .takeUntil(self.rac_willDeallocSignal())
+        let o = RxTimerObservableCreator.createTimer(limit)
+        let s = o.toRACSignal()
+        
+        s.takeUntil(self.rac_willDeallocSignal())
             .takeUntil(self.stopTimerSignal)
             .subscribeOn(RACScheduler.mainThreadScheduler())
             .subscribeNext({ [weak self] next in
@@ -38,5 +40,6 @@ class RAC2ViewController: SwiftBaseViewController {
     override func stopButtonPressed() {
         self.stopTimerSignal.sendNext(nil)
     }
+    
     
 }

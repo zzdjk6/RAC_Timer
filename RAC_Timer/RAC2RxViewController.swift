@@ -26,28 +26,8 @@ class RAC2RxViewController: SwiftBaseViewController {
         let limit = 9
         self.updateButtons(limit)
         
-        let o = Observable<Int>.create { observer -> RxSwift.Disposable in
-            // using a subject to dispose RACSignal when Observable dispose
-            let endSubject = RACSubject()
-            let s = RAC2TimerSignalCreator.createSignal(9).takeUntil(endSubject)
-            s.subscribeNext(
-                { next in
-                    observer.onNext(next as? Int ?? 0)
-                },
-                error:
-                { error in
-                    observer.onError(error)
-                },
-                completed:
-                {
-                    observer.onCompleted()
-            })
-            
-            return AnonymousDisposable({
-                endSubject.sendCompleted()
-            })
-        }
-        
+        let s = RAC2TimerSignalCreator.createSignal(9)
+        let o = s.toObservable().map { $0 as? Int ?? 0 }
         o.takeUntil(self.rx_deallocating)
             .takeUntil(self.stopTimerSignal)
             .subscribeOn(MainScheduler.instance)
