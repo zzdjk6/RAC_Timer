@@ -20,6 +20,7 @@
 		2460CD7B1CCBE66600518594 /* RAC2RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2460CD7A1CCBE66600518594 /* RAC2RxViewController.swift */; };
 		2470E0C51CD7C79500DF33C3 /* RAC4TimerSignalCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2470E0C41CD7C79500DF33C3 /* RAC4TimerSignalCreator.swift */; };
 		2470E0CE1CD7CD5C00DF33C3 /* RAC2TimerSignalCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2470E0CD1CD7CD5C00DF33C3 /* RAC2TimerSignalCreator.m */; };
+		248059F21CDCD5E600B5A6A2 /* NSTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248059F11CDCD5E600B5A6A2 /* NSTimerViewController.swift */; };
 		24CA46DE1CCA79D200F9D204 /* RAC4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CA46DD1CCA79D200F9D204 /* RAC4ViewController.swift */; };
 		24CA46E01CCA79DC00F9D204 /* RAC2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CA46DF1CCA79DC00F9D204 /* RAC2ViewController.swift */; };
 		24CA46E21CCA8C0700F9D204 /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CA46E11CCA8C0700F9D204 /* RxViewController.swift */; };
@@ -45,6 +46,7 @@
 		2470E0C41CD7C79500DF33C3 /* RAC4TimerSignalCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC4TimerSignalCreator.swift; sourceTree = "<group>"; };
 		2470E0CC1CD7CD5C00DF33C3 /* RAC2TimerSignalCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAC2TimerSignalCreator.h; sourceTree = "<group>"; };
 		2470E0CD1CD7CD5C00DF33C3 /* RAC2TimerSignalCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAC2TimerSignalCreator.m; sourceTree = "<group>"; };
+		248059F11CDCD5E600B5A6A2 /* NSTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimerViewController.swift; sourceTree = "<group>"; };
 		24CA46DD1CCA79D200F9D204 /* RAC4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC4ViewController.swift; sourceTree = "<group>"; };
 		24CA46DF1CCA79DC00F9D204 /* RAC2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC2ViewController.swift; sourceTree = "<group>"; };
 		24CA46E11CCA8C0700F9D204 /* RxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				2460CD7A1CCBE66600518594 /* RAC2RxViewController.swift */,
 				24CA46DF1CCA79DC00F9D204 /* RAC2ViewController.swift */,
 				242C812D1CDB71D000729ED1 /* RxToRAC2ViewController.swift */,
+				248059F11CDCD5E600B5A6A2 /* NSTimerViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				242C812C1CDB5D8E00729ED1 /* RAC2RxBridge.swift in Sources */,
 				240E8E571CCE9E670087570E /* MainViewController.swift in Sources */,
 				240E8E551CCE99DB0087570E /* SwiftBaseViewController.swift in Sources */,
+				248059F21CDCD5E600B5A6A2 /* NSTimerViewController.swift in Sources */,
 				2470E0C51CD7C79500DF33C3 /* RAC4TimerSignalCreator.swift in Sources */,
 				2460CD7B1CCBE66600518594 /* RAC2RxViewController.swift in Sources */,
 				2432FCFF1CCA537C005ABAFF /* NSObject+RAC4.swift in Sources */,

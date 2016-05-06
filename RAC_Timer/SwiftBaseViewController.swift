@@ -11,6 +11,8 @@ import Cartography
 
 class SwiftBaseViewController: UIViewController {
     
+    let timerLimit = 9
+    
     let startButtonDefaultTitle = "Start"
     let stopButtonDefaultTtile = "Stop"
     
@@ -22,6 +24,10 @@ class SwiftBaseViewController: UIViewController {
         
         self.initUI()
         self.updateButtons()
+    }
+    
+    deinit {
+        print("\(self.dynamicType.self): deinit")
     }
     
     func startButtonPressed() {
@@ -86,6 +92,5 @@ class SwiftBaseViewController: UIViewController {
             view1.centerX == view2.centerX
             view1.top == view2.bottom + 10
         }
-        
     }
 }

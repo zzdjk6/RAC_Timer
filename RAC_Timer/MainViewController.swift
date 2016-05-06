@@ -39,4 +39,10 @@ class MainViewController: UITableViewController {
         vc.title = (sender as? UIButton)?.titleLabel?.text
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func usingNSTimerButtonPressed(sender: AnyObject? = nil) {
+        let vc = NSTimerViewController()
+        vc.title = (sender as? UIButton)?.titleLabel?.text
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

@@ -137,6 +137,32 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Using NSTimer" id="Tul-TN-Kjn">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Hq7-Ig-BaI">
+                                        <rect key="frame" x="0.0" y="487" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hq7-Ig-BaI" id="G9l-au-n1w">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Et4-7W-c3q">
+                                                    <rect key="frame" x="8" y="7" width="304" height="30"/>
+                                                    <state key="normal" title="Using NSTimer"/>
+                                                    <connections>
+                                                        <action selector="usingNSTimerButtonPressed:" destination="6Tf-se-d6Z" eventType="touchUpInside" id="t9J-Yx-oWU"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Et4-7W-c3q" firstAttribute="leading" secondItem="G9l-au-n1w" secondAttribute="leadingMargin" id="VAb-2Z-iP0"/>
+                                                <constraint firstItem="Et4-7W-c3q" firstAttribute="centerY" secondItem="G9l-au-n1w" secondAttribute="centerY" id="imr-xl-ws9"/>
+                                                <constraint firstItem="Et4-7W-c3q" firstAttribute="trailing" secondItem="G9l-au-n1w" secondAttribute="trailingMargin" id="ytY-2Z-06Z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="6Tf-se-d6Z" id="xOF-ww-nDd"/>
